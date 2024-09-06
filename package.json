@@ -1,0 +1,16 @@
+{
+  "name": "cypress-assessment-test",
+  "version": "1.0.0",
+  "description": "this is for cypress assessment test of shell recharge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ajay_Malik_Test",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.14.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}
