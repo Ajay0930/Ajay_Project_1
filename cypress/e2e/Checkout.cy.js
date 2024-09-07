@@ -19,6 +19,8 @@ describe('Test Checkout Out process', ()=>{
         cy.get('[data-qa="expiry-month"]').type(12)
         cy.get('[data-qa="expiry-year"]').type(2026)
         cy.get('[data-qa="pay-button"]').click()
+        cy.get('[data-qa="order-placed"] > b').should('be.visible')
+        cy.get('.col-sm-9 > p').should('have.text', 'Congratulations! Your order has been confirmed!')
         cy.get('[data-qa="continue-button"]').click()
 
     })
