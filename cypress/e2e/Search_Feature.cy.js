@@ -1,6 +1,9 @@
 
 
 describe('Search Feature test', ()=>{
+
+//used before method of login using custom login function created in commands.js file
+
     before(() =>{
         cy.visit('http://www.automationpractice.pl/')
         cy.login('malik.ajay1992@yahoo.com', 'Ajay@123')
@@ -8,6 +11,8 @@ describe('Search Feature test', ()=>{
     
     })
 
+
+    //used search method created in command.js file
     it('should able to search', ()=>{
         cy.search('Dress')
         cy.get('.lighter').should('contain.text', 'Dress')
