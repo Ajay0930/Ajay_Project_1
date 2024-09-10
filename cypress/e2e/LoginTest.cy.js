@@ -27,7 +27,7 @@ describe('Login Feature Test', ()=>{
 
 //Another method to login using fixtures file test data:
 
-describe.only('Automation Test Suite - Fixtures', ()=> {
+describe('Automation Test Suite - Fixtures', ()=> {
 
     //Use the cy.fixture() method to pull data from fixture file
     before( function () {
