@@ -40,16 +40,17 @@ describe('Automation Test Suite - Fixtures', ()=> {
   
       //Provide the data read from the fixture
       cy.visit('http://www.automationpractice.pl/index.php');
-      cy.get('.header_user_info').click()
+      cy.get('.header_user_info').click();
       cy.get('#email').type(this.data.Email);
-      cy.get('#passwd').type(this.data.Password)
+      cy.get('#passwd').type(this.data.Password);
   
       //Checking whether the Register button is disabled or not either by grabbing the property or by checking its UI behavior
       cy.get('#SubmitLogin').should('not.be.disabled');
+      cy.get('#SubmitLogin > span').click();
       cy.wait(300)
   
   
       //Checking whether the Registration is successful and whether the user has the control of my account
-      cy.url().should('include', 'controller=authentication&back=my-account');
+      cy.url().should('include', 'controller=my-account');
     })
   })
